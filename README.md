@@ -2,6 +2,22 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+It has a PLP page and Shopping bag Functionality(Add/Remove and update quanitity). 
+
+Filter logic is also there on PLP page, to seach by keyword and user can click on any category to get the result
+
+I have used Redux hooks, redux thunk for middleware api calls. 
+
+For PLP data, I have made call to FakeAPI
+
+https://fakestoreapi.com/docs
+
+** To Get all products data
+https://fakestoreapi.com/products
+
+** To Get All Categories
+https://fakestoreapi.com/products/categories
+
 ## Available Scripts
 
 In the project directory, you can run:
