@@ -1,0 +1,23 @@
+.App {
+  //text-align: center;
+  display: flex;
+  flex-direction: column;
+  //width: 100%;
+}
+/*
+.btn {
+  display: inline-block;
+  letter-spacing: 0.025rem;
+  padding: 0.45rem 0.75rem;
+  margin: 1rem 0;
+  border: 0;
+  font-weight: bold;
+}
+*/
+.btn-primary {
+  background-color: black;
+  color: white;
+}
+input {
+  padding: 8px;
+}

@@ -1,0 +1,118 @@
+.main-content {
+  padding: 1.25rem;
+}
+.cart-wrapper {
+  display: flex;
+  flex-direction: column;
+
+
+.cart-item {
+  border-bottom: 1px solid #DDD;
+  display: flex;
+  padding: 1rem 0;
+  &__content {
+    padding: 0 1rem;
+    &-section:not(:first-child) {
+          padding-top: 0.5rem;
+      }
+      &-section:last-child {
+          padding-bottom: 0.5rem;
+      }
+  }
+  &__price {
+    font-weight: bold;
+    @media (min-width: 768px) {
+      text-align: right;
+     }
+    
+  }
+  &__title {
+    font-weight: 400;
+  }
+  &__desc {
+    display: none;
+    
+    @media (min-width: 768px) {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+     -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+     }
+}
+  &__quantity {
+    box-sizing: border-box;
+    padding: 0;
+   // margin-top: 1rem;
+  }
+  &__media{
+
+    &-container {
+        background-color: transparent;
+        overflow: hidden;
+        position: relative;
+       // padding-left: 100%;
+        height: 100px;
+        width: 100px;
+        @media (min-width: 768px) {
+          height: 150px;
+          width:150px;
+      }
+        .cart-item__image {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          object-fit: contain;
+        }
+      }
+  } 
+  &__actions{
+    display: flex;
+  }
+  &__remove {
+    align-self: flex-end;
+    @media (min-width: 768px) {
+      
+        margin-left: 20px;
+    }
+  }
+}
+}
+
+
+.cart-subTotal {
+  text-align: right;
+  font-weight: bold;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  border-bottom: 1px solid #DDD;
+  
+  &__title {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+  }
+  &__price {    
+    display: none;
+    align-self: flex-end;
+    @media (min-width: 768px) {
+      display: block;
+     }
+    
+  }
+}
+.order-summary {
+  line-height: 4rem;
+  border-bottom: 1px solid #DDD;
+
+}
+
+.cart-summary {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,25 @@
+.basket {
+    position: relative;
+    &__count {
+        position: absolute;
+        position: absolute;
+        text-align: center;
+        color: #4e3068;
+        font-size: 10px;
+        font-size: .8rem;
+        width: 2rem;
+        top: 9px;
+        font-weight: bold;
+    }
+}
+.navbar {
+    padding: 0 2rem;
+}
+.navbar-brand {
+    margin-right: 0;
+    text-align: center;
+}
+.cart-icon {
+    justify-content: end;
+    align-items: flex-end;
+}

@@ -1,12 +1,38 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+
 import reportWebVitals from './reportWebVitals';
+
+import {createStore, applyMiddleware} from 'redux'
+import {Provider} from 'react-redux';
+import thunk from 'redux-thunk'
+import { composeWithDevTools } from 'redux-devtools-extension';
+import rootReducer from './store/reducers';
+
+/*
+import 'normalize.css'; 
+import 'materialize-css/dist/css/materialize.min.css';
+import 'materialize-css/dist/js/materialize';
+import 'material-icons/iconfont/material-icons.css'
+*/
+
+
+
+/* import bootstrap to set changes */
+//import "bootstrap/scss/bootstrap.scss";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './custom.scss';
+import './index.scss';
+
+import App from './App';
+const middleware = [thunk]
+const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(...middleware)));
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider  store={store}>
+    <App/>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
